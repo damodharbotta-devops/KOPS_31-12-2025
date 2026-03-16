@@ -1,0 +1,11 @@
+    aws s3 mb s3://damodhar2.k8s.flm  ---->  Create s3 bucket
+    aws s3 ls
+	 
+	##  Kops cluster commands:
+	 
+    export KOPS_STATE_STORE=s3://damodhar2.k8s.flm
+	 
+    kops create cluster --name damodhar.k8s.local --zones=us-east-2a,us-east-2b --master-size c7i-flex.large --master-count 1 --master-volume-size 30 --node-size t3.micro --node-count 2 --node-volume-size 20 --image=ami-0198cdf7458a7a932
+	 
+   kops update cluster --name damodhar.k8s.local --yes --admin
+
