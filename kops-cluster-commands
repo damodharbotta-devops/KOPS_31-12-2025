@@ -5,7 +5,8 @@
 	 
     export KOPS_STATE_STORE=s3://damodhar2.k8s.flm
 	 
-    kops create cluster --name damodhar.k8s.local --zones=us-east-1a,us-east-1b --master-size c7i-flex.large --master-count 1 --master-volume-size 30 --node-size t3.micro --node-count 2 --node-volume-size 20 --image=ami-02dfbd4ff395f2a1b
+    kops create cluster --name damodhar.k8s.local --zones=us-east-1a,us-east-1b --master-size c7i-flex.large --master-count 1 --master-volume-size 30 --node-size t3.micro --node-count 2 --node-volume-size 20 --image=ami-0ec10929233384c7f
+
 	 
    kops update cluster --name damodhar.k8s.local --yes --admin
 
